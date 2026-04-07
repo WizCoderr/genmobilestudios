@@ -9,7 +9,6 @@ import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 import WaitlistModal from './components/WaitlistModal'
-
 function App() {
   const [showWaitlist, setShowWaitlist] = useState(false)
 

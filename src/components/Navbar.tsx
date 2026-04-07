@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, type MouseEvent } from 'react';
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
@@ -35,7 +35,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const scrollTo = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) {
@@ -72,12 +72,6 @@ export default function Navbar() {
               </a>
             );
           })}
-        </div>
-
-        <div className="navbar-actions">
-          <button className="btn-icon" aria-label="Toggle dark mode">
-            <span className="material-symbols-outlined">dark_mode</span>
-          </button>
         </div>
       </div>
     </nav>

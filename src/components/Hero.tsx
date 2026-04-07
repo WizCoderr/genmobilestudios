@@ -7,13 +7,7 @@ export default function Hero({ onJoinWaitlist }: HeroProps) {
     <section className="hero" id="hero">
       <div className="hero-gradient" />
       <div className="hero-content">
-        <div className="hero-badge">
-          <span className="hero-badge-dot">
-            <span className="hero-badge-dot-ping" />
-            <span className="hero-badge-dot-core" />
-          </span>
-          Autonomous Agent V2 Now Live
-        </div>
+        
 
         <h1>
           Build Full Flutter Apps <br />
@@ -21,8 +15,7 @@ export default function Hero({ onJoinWaitlist }: HeroProps) {
         </h1>
 
         <p className="hero-subtitle">
-          Deploy a fleet of autonomous engineering agents that plan, architect,
-          and generate production-ready Flutter code from a single text prompt.
+          GenMobi.Studio is the first AI-powered Flutter app builder that uses autonomous agents to create production-ready mobile apps in minutes. No coding required.
         </p>
 
         <div className="hero-buttons">

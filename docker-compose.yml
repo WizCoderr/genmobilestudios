@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_WEB3FORMS_KEY: ${VITE_WEB3FORMS_KEY}
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    restart: unless-stopped

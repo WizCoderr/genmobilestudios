@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 
-const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // Replace with your key from https://web3forms.com
-
 interface WaitlistModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -48,33 +46,22 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     setStatus('sending');
 
     try {
-      const payload = {
-        access_key: WEB3FORMS_KEY,
-        subject: `🚀 New Waitlist Signup — ${formData.name}`,
-        from_name: 'GenMobi.Studio Waitlist',
-        name: formData.name,
-        email: formData.email,
-        role: formData.role,
-        message: formData.message || 'No message provided',
-        // Auto-reply to the user
-        autoresponse: formData.email,
-        autoresponse_subject: 'Welcome to GenMobi.Studio Waitlist! 🎉',
-        autoresponse_message: `Hi ${formData.name},\n\nThank you for joining the GenMobi.Studio waitlist! We're thrilled to have you on board.\n\nYou're now in line to get early access to our AI-powered Flutter app builder. We'll notify you as soon as it's your turn.\n\nIn the meantime, stay tuned for updates!\n\n— The GenMobi.Studio Team`,
-      };
-
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(formData),
       });
 
       if (res.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', role: '', message: '' });
       } else {
+        const errorResponse = await res.json();
+        console.error('Waitlist submission failed:', errorResponse);
         setStatus('error');
       }
-    } catch {
+    } catch (error) {
+      console.error('Waitlist submit error:', error);
       setStatus('error');
     }
   };
