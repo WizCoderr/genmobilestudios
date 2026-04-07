@@ -1,51 +1,101 @@
-# React + TypeScript + Vite
+# GenMobi.Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React + TypeScript landing page for GenMobi.Studio, an AI-powered platform that builds full Flutter apps using autonomous engineering agents.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+GenMobi.Studio enables users to deploy a fleet of autonomous engineering agents that can plan, architect, and generate production-ready Flutter code from a single text prompt. This landing page showcases the product's features, workflow, use cases, and includes a waitlist signup.
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Hero Section**: Eye-catching introduction with animated elements
+- **Interactive Demo**: Showcases the AI agent capabilities
+- **Feature Highlights**: Detailed breakdown of platform capabilities
+- **Workflow Visualization**: Step-by-step process explanation
+- **Use Cases**: Real-world application examples
+- **FAQ Section**: Common questions and answers
+- **Waitlist Modal**: Email collection for early access
+- **Responsive Design**: Optimized for all device sizes
 
-Note: This will impact Vite dev & build performances.
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Custom CSS with modern design patterns
+- **Icons**: Material Symbols Outlined
+- **Fonts**: Space Grotesk and Inter
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v18 or higher)
+- npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Hero.tsx          # Main hero section
+│   ├── Demo.tsx          # Interactive demo component
+│   ├── Features.tsx      # Feature highlights
+│   ├── Workflow.tsx      # Process visualization
+│   ├── UseCases.tsx      # Application examples
+│   ├── FAQ.tsx           # Frequently asked questions
+│   ├── FinalCTA.tsx      # Call-to-action section
+│   ├── Footer.tsx        # Site footer
+│   ├── Navbar.tsx        # Navigation bar
+│   ├── Pricing.tsx       # Pricing information
+│   ├── SocialProof.tsx   # Testimonials/social proof
+│   └── WaitlistModal.tsx # Email signup modal
+├── App.tsx               # Main application component
+├── main.tsx              # Application entry point
+└── assets/               # Static assets
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run linting: `npm run lint`
+5. Test your changes
+6. Submit a pull request
+
+## License
+
+This project is private and proprietary to GenMobi Studios.
 
 ```js
 // eslint.config.js
