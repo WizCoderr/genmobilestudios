@@ -1,19 +1,14 @@
-FROM node:20-alpine AS builder
+FROM oven/bun:latest
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci --production=false
+RUN bun install
 
 COPY . .
 ARG VITE_WEB3FORMS_KEY
 ENV VITE_WEB3FORMS_KEY=${VITE_WEB3FORMS_KEY}
 
-RUN npm run build
+RUN bun run build
 
-# Production stage
-FROM nginx:1.26-alpine AS runner
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 4173
+CMD ["bun", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4173"]
