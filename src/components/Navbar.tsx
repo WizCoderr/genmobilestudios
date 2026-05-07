@@ -73,6 +73,22 @@ export default function Navbar() {
             );
           })}
         </div>
+
+        <div className="navbar-actions">
+          <a
+            href="https://www.producthunt.com/products/genmobi-studio?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-genmobi-studio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="GenMobi.Studio - Build Full Flutter Apps with AI Agents | Product Hunt"
+              width="250"
+              height="54"
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1141455&amp;theme=dark&amp;t=1778162128299"
+              style={{ width: '180px', height: 'auto' }}
+            />
+          </a>
+        </div>
       </div>
     </nav>
   );
