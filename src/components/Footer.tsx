@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2024 GenMobi.Studio. Built by The Neon Architect.</p>
+          <p>© 2026 GenMobi.Studio. Built by The Neon Architect.</p>
           <div className="footer-bottom-links">
             <a href="#">Status</a>
             <a href="#">Changelog</a>
