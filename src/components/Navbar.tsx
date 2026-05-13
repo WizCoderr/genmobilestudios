@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, type MouseEvent } from 'react';
+import logo from '../assets/logo.png';
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
@@ -55,7 +56,7 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          GenMobi.Studio
+          <img src={logo} alt="GenMobi.Studio" style={{ height: '32px', display: 'block' }} />
         </a>
 
         <div className="navbar-links">

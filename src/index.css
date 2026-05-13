@@ -217,11 +217,8 @@ img {
 }
 
 .navbar-logo {
-  font-family: var(--font-headline);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-links {
@@ -1230,10 +1227,8 @@ img {
 }
 
 .footer-brand {
-  font-family: var(--font-headline);
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: white;
+  display: flex;
+  align-items: center;
   margin-bottom: 1.5rem;
 }
 

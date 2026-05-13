@@ -1,10 +1,14 @@
+import logo from '../assets/logo.png';
+
 export default function Footer() {
   return (
     <footer className="footer" id="footer">
       <div className="footer-inner">
         <div className="footer-grid">
           <div>
-            <div className="footer-brand">GenMobi.Studio</div>
+            <div className="footer-brand">
+              <img src={logo} alt="GenMobi.Studio" style={{ height: '40px' }} />
+            </div>
             <p className="footer-desc">
               Built by Wizcoderr.
               <br />
